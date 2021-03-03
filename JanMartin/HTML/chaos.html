@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Size of switch*/
+.switchV2 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/*this seems to change visual from check box to slider*/
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+/*height, width of the circle on the button */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;     
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+/*this moves the round slider part on x axis*/
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/*only changes color if checked*/
+input:checked + .slider {
+  background-color: #2196F3;
+}
+/* only makes the original checkbox disappear, visually*/
+/*
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+*/
+/*No idea what this does ...*/
+/*
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+*/
+/* rounds corners of slider box | moved this functionality to .slider */
+/*
+.slider.round {
+  border-radius: 34px;
+}
+*/
+/*this makes the slider round | moved this functionality to .slider:before */
+/*
+.slider.round:before {
+  border-radius: 50%;
+}
+*/
+</style>
+</head>
+<body>
+
+<h2>Toggle Switch</h2>
+<div>
+<label class="switchV2">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+<label for="button1">Unchecked</label>
+
+<label class="switchV2">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+</label>
+<label for="button2">Checked</label>
+</div>
+
+<label class="switchV2">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+</label>
+<label for="button">this is a button</label>
+</body>
+</html> 
