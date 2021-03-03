@@ -1,0 +1,115 @@
+
+h1 {
+    font-family: Arial;
+    color: rgb(255, 0, 0);
+}
+h2 {
+    font-family: Arial;
+    color: rgb(39, 37, 46);
+    font-weight: 700;
+}
+h4 {
+    font-family: Arial;
+    color: rgb(39, 37, 46);
+}
+p {
+    font-family: Arial;
+    color: rgb(39, 37, 46);
+}
+a {
+    text-decoration: none;
+}
+label {
+    font-family: Arial;
+    color: rgb(39, 37, 46);
+    font-size: 1em;
+}
+#middleBox {
+    width: 70%;
+    margin: 10px auto;
+}
+#cookieCheckBoxes{
+    display: inline-block;
+}
+.button1{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    height: 50px;
+    margin-top: 30%;
+    background-color: rgb(240, 215, 34);
+    border: 0;
+    border-radius: 12px;
+}
+.button2{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    height: 50px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 12px;
+
+    background-color: rgb(192, 192, 192);
+}
+.centeredBox {
+    width: fit-content;
+    margin: 10px auto;
+}
+.switch {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.switch li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+/* Size of switch*/
+.switchV2 {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  /*this seems to change visual from check box to slider*/
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 115, 115);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  /*height, width of the circle on the button */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;     
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  /*this moves the round slider part on x axis*/
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  /*only changes color if checked*/
+  input:checked + .slider {
+    background-color: #6bf16b;
+  }
+  /* only makes the original checkbox disappear, visually*/
+.switchV2 input { 
+  opacity: 0;
+
+}
